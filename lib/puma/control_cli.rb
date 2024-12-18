@@ -16,7 +16,7 @@ module Puma
       'gc'       => nil,
       'gc-stats' => nil,
       'halt'              => 'SIGQUIT',
-      'info'              => 'SIGINFO',
+      'info'              => 'SIGTTIN',
       'phased-restart'    => 'SIGUSR1',
       'refork'            => 'SIGURG',
       'reload-worker-directory' => nil,
@@ -27,8 +27,8 @@ module Puma
       'status'   => '',
       'stop'              => 'SIGTERM',
       'thread-backtraces' => nil,
-      'worker-count-down' => 'SIGTTOU',
-      'worker-count-up'   => 'SIGTTIN'
+      # 'worker-count-down' => 'SIGTTOU',
+      # 'worker-count-up'   => 'SIGTTIN'
     }.freeze
 
     # commands that cannot be used in a request
